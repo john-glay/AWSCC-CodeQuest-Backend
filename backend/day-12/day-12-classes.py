@@ -7,11 +7,15 @@ class Student:
         self.classes = classes
         self.offenses = offenses
 
-student1 = Student("Juan Dela Cruz", 20, True, [], [])
+    # add a new class to the student
+    def add_class(self, new_class):
+        self.classes.append(new_class)
 
-print(f"Name: {student1.name}")
+student1 = Student("John Glay C. Bunao", 20, True, [], [])
+student1.add_class("Computer Science")
+
+print(f"\nName: {student1.name}")
 print(f"Age: {student1.age}")
 print(f"Status: {'Enrolled' if student1.is_enrolled else 'Not Enrolled Yet'}")
 print(f"Classes: {student1.classes}")
-print(f"Offenses: {student1.offenses}")
-
+print(f"Offenses: {student1.offenses}\n")
