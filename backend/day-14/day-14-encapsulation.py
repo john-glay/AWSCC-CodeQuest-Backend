@@ -13,4 +13,6 @@ class Student:
         return datetime.fromtimestamp(self._birthdate).strftime("%B %d, %Y")
 
 student1 = Student("John", 2002, 10, 5)
-print(student1.birthdate)
+
+print(student1._birthdate) # private
+print(student1.birthdate) # public
