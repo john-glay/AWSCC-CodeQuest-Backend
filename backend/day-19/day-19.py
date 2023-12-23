@@ -1,18 +1,28 @@
 import requests
 
-# API endpoint (example using JSONPlaceholder API)
-api_url = "https://jsonplaceholder.typicode.com/posts/1"
+endpoint = "https://api.spacexdata.com/v5/launches/latest"
 
-# Sending a GET request
-response = requests.get(api_url)
+headers = {
+    'User-Agent': 'MyApp/1.0'
+}
 
-# Handling the response
+response = requests.get(endpoint, headers=headers)
+
 if response.status_code == 200:
-    # Response content as JSON
     data = response.json()
-    title = data["title"]
-    body = data["body"]
-    print(f"Title: {title}")
-    print(f"Body: {body}")
+
+    name = data["name"]
+    date_utc = data["date_utc"]
+    success = data["success"]
+    patch_image_url = data["links"]["patch"]["small"]
+    webcast_url = data["links"]["webcast"]
+
+    print("\n-- Latest SpaceX Launch Information --")
+    print(f"\nName: {name}")
+    print(f"Date (UTC): {date_utc}")
+    print(f"Success: {'Yes' if success else 'No'}")
+    print("\nDETAILS:")
+    print(f"Patch Image: {patch_image_url}")
+    print(f"Webcast URL: {webcast_url}\n")
 else:
-    print(f"Request failed with status code: {response.status_code}")
+    print(f"\nRequest failed with status code: {response.status_code}\n")
