@@ -1,0 +1,311 @@
+/* ---- Initial Setup ---- */
+:root {
+    /* Color */
+    --dark-blue: #343D46;
+    --blue: #65737E;
+    --gray: #C0C5CE;
+
+    /* Font */
+    --poppins: 'Poppins', sans-serif;
+
+    /* Font Weight */
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
+    --extra-bold: 800;
+    --black: 900;
+
+    /* Transition */
+    --transition: all 0.3s ease;
+}
+
+::placeholder {
+    color: var(--gray);
+    opacity: 1; /* Firefox */
+  }
+  
+::-ms-input-placeholder { /* Edge 12-18 */
+    color: var(--gray);
+}
+
+/* ---- Global ---- */
+body {
+    font-family: var(--poppins);
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    margin: 1.5rem;
+    padding: 0;
+    width: 100%;
+}
+
+.right {
+    background-color: var(--blue);
+    margin: 0;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+/* ---- Title ---- */
+.title {
+    padding: 0.875rem 0 2.375rem 0;
+}
+
+.title-heading {
+    color: var(--dark-blue);
+    font-size: 1.531rem;
+    font-weight: var(--black);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.title-name {
+    color: var(--gray);
+    font-size: 0.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* ---- Add Account and Update Account ---- */
+.add,
+.update {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+    margin: 0 0 1.5rem 0;
+    padding: 1.5rem;
+}
+
+.add-heading,
+.update-heading {
+    color: var(--blue);
+    font-size: 1rem;
+    font-weight: var(--semi-bold);
+    margin: 0 0 1.2rem 0;
+    text-align: center;
+}
+
+.add-form,
+.update-form {
+    position: relative;
+}
+
+.add-label,
+.update-label {
+    background-color: white;
+    color: var(--gray);
+    font-size: 0.5rem;
+    font-weight: var(--medium);
+    left: 1rem;
+    padding: 0 0.75rem;
+    position: absolute;
+    top: -0.375rem;
+}
+
+.add-input,
+.update-input {
+    border: var(--gray) 0.125rem solid;
+    border-radius: 0.5rem;
+    margin: 0 0 1.25rem 0;
+    padding: 0.5rem 1rem;
+    width: 100%; 
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+}
+
+.add-btn,
+.update-btn {
+    background-color: var(--dark-blue);
+    border: var(--dark-blue) 0.188rem solid;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    font-weight: var(--semi-bold);
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.add-btn:hover,
+.update-btn:hover {
+    background-color: white;
+    color: var(--dark-blue);
+    transition: var(--transition);
+}
+
+/* ---- Display Account ---- */
+.display-title {
+    color: white;
+    font-size: 1.531rem;
+    font-weight: var(--black);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.display-accounts {
+    border: white  0.125rem solid;
+    border-radius: 0.5rem;
+    margin: 2rem 0 0 0;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    position: relative;
+}
+
+.display-website {
+    background-color: var(--blue);
+    color: white;
+    font-size: 1rem;
+    font-weight: var(--semi-bold);
+    left: 1.5rem;
+    margin: 0;
+    padding: 0 1rem;
+    position: absolute;
+    top: -0.875rem;
+}
+
+.display-items {
+    margin: 1.5rem 0 0 0;
+}
+
+.display-info{
+    color: white;
+    margin: 0;
+}
+
+.display-btns {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.display-update,
+.display-delete {
+    background-color: var(--dark-blue);
+    border: var(--dark-blue) 0.188rem solid;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    font-weight: var(--semi-bold);
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.display-update:hover,
+.display-delete:hover {
+    background-color: var(--gray);
+    color: var(--dark-blue);
+    transition: var(--transition);
+}
+
+/* ---- Media Query ---- */
+@media (min-width: 62rem) {
+    .main {
+        display: flex;
+    }
+
+    .left {
+        margin: 3rem 4rem 4rem 4rem;
+    }
+
+    .right {
+        padding: 3rem 4rem 4rem 4rem;
+    }
+    
+    .title {
+        padding: 0 0 4rem 0;
+        position: relative;
+    }
+
+    .title-heading {
+        font-size: 3.125rem;
+        text-align: left;
+    }
+
+    .title-name {
+        bottom: 3.25rem;
+        font-size: 1rem;
+        position: absolute;
+        text-align: left;
+    }
+
+    .add,
+    .update {
+        border-radius: 0.75rem;
+        margin: 0 4rem 4rem 4rem;
+        padding: 2rem;
+    }
+
+    .add-heading,
+    .update-heading {
+        font-size: 1.563rem;
+        margin: 0 0 2rem 0;
+        text-align: center;
+    }
+    
+    .add-label,
+    .update-label {
+        font-size: 0.75rem;
+        left: 0.8rem;
+        padding: 0 0.75rem;
+        top: -0.575rem;
+    }
+
+    .add-input,
+    .update-input {
+        margin: 0 0 1.5rem 0;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .add-submit,
+    .update-submit {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .add-btn,
+    .update-btn {
+        padding: 0.75rem 1.5rem;
+        width: auto;
+    }
+
+    .display-title {
+        font-size: 2.25rem;
+    }
+
+    .display-accounts {
+        border-radius: 0.75rem;
+        padding: 1.5rem 3rem 3rem 3rem;
+    }
+
+    .display-website {
+        font-size: 1.563rem;
+        left: 3rem;
+        padding: 0 1.5rem;
+        top: -1.25rem;
+    }
+
+    .display-items {
+        margin: 1.5rem 0 0 0;
+    }
+
+    .display-items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .display-btns {
+        gap: 1rem;
+    }
+
+    .display-update,
+    .display-delete {
+        padding: 0.75rem 1.5rem;
+    }
+
+}
