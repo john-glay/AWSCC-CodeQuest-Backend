@@ -1,0 +1,20 @@
+{
+    "Facebook": [
+        {
+            "email": "sample@gmail.com",
+            "password": "abcde12345"
+        }
+    ],
+    "Youtube": [
+        {
+            "email": "awsccpupmnl@gmail.com",
+            "password": "213345rsdfhrts"
+        }
+    ],
+    "LinkedIn": [
+        {
+            "email": "backend@gmail.com",
+            "password": "softwareandwebdev"
+        }
+    ]
+}
